@@ -1,0 +1,16 @@
+mi servicio tareas es la ejecución de la prueba angular
+el front ejecutar con 
+	npm start
+si no funciona, usar
+	npx ng cache clean
+	npm install
+	npm start
+
+el backend basta con ejecutarlo normalmente o usar su compilado dentro de la carpeta target
+
+
+
+en cuanto a la prueba de buscar duplicados
+1.-importarlo en tipo maven.
+2.-darle en RUN al archivo ContadorDuplicados
+3.- al desplegarse la ventana darle en seleccionar excel y buscar el excel

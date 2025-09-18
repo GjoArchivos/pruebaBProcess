@@ -1,0 +1,31 @@
+USE tareasdb;
+
+-- 1) Tabla principal para la app de tareas
+CREATE TABLE IF NOT EXISTS TASKS (
+  ID BIGINT NOT NULL AUTO_INCREMENT,
+  TITLE VARCHAR(200) NOT NULL,
+  COMPLETED TINYINT(1) NOT NULL DEFAULT 0, -- 0 = false, 1 = true
+  CREATED_AT TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  UPDATED_AT TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (ID),
+  INDEX idx_tasks_completed (COMPLETED)
+) ENGINE=InnoDB;
+
+-- 2) Datos de prueba (opcional)
+INSERT INTO tasks (TITLE, COMPLETED) VALUES
+  ('Comprar leche', 0),
+  ('Enviar informe', 1);
+  
+  
+Select ID, TITLE,COMPLETED,CREATED_AT,UPDATED_AT from TASKS;
+
+
+
+
+
+ejemplos de mis servicios para postman:
+
+http://localhost:8080/api/tasks/Lista
+http://localhost:8080/api/tasks/create
+http://localhost:8080/api/tasks/update/4
+http://localhost:8080/api/tasks/delete/3
