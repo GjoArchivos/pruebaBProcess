@@ -1,0 +1,19 @@
+# Java
+target/
+build/
+out/
+.gradle/
+*.log
+
+# Angular / Node
+node_modules/
+dist/
+.angular/cache/
+.npm/
+
+# IDE / OS
+.vscode/
+.idea/
+*.iml
+.DS_Store
+Thumbs.db
